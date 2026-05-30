@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhavya Damani — Full-Stack Developer & Data Analyst</title>
+  <meta name="description" content="Full-Stack Developer & Data Analyst based in Mumbai. Building end-to-end web apps and analytics pipelines with Next.js, Python, PostgreSQL, and Power BI." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bhavya Damani — Full-Stack Developer & Data Analyst" />
+  <meta property="og:description" content="Building end-to-end web apps and analytics pipelines. VCET AI & Data Science student, 2x intern, national showcase runner-up." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bhavya031205.github.io/Portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Particle canvas -->
+<canvas id="particles"></canvas>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Mobile hamburger -->
+<div class="hamburger" id="hamburger" onclick="toggleSidebar()">
+  <span></span><span></span><span></span>
+</div>
+
+<div class="layout">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div >
+        <img src="assests\Myimage.png" alt="Bhavya Damani" onerror="this.style.display='none';this.parentElement.style.background='var(--bg3)'" width="50" />
+      </div>
+      <div>
+        <div class="logo-text">Bhavya Damani</div>
+        <div class="logo-sub">Full-Stack · Data · ML · IoT</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#hero" class="nav-link active" data-section="hero">
+        <span class="nav-icon">⌂</span> Home
+      </a>
+      <a href="#about" class="nav-link" data-section="about">
+        <span class="nav-icon">◎</span> About
+      </a>
+      <a href="#skills" class="nav-link" data-section="skills">
+        <span class="nav-icon">◈</span> Skills
+      </a>
+      <a href="#resume" class="nav-link" data-section="resume">
+        <span class="nav-icon">◉</span> Resume
+      </a>
+      <a href="#portfolio" class="nav-link" data-section="portfolio">
+        <span class="nav-icon">◧</span> Projects
+      </a>
+      <a href="#leadership" class="nav-link" data-section="leadership">
+        <span class="nav-icon">◆</span> Leadership
+      </a>
+      <a href="#contact" class="nav-link" data-section="contact">
+        <span class="nav-icon">◎</span> Contact
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/bhavya-damani-1009b6277/" target="_blank" title="LinkedIn">in</a>
+        <a href="https://github.com/Bhavya031205" target="_blank" title="GitHub">⌥</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bhavyadamani3125@gmail.com" target="_blank" title="Email">✉</a>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+        <div class="toggle-track">
+          <div class="toggle-thumb"></div>
+        </div>
+        <span id="themeLabel">Light mode</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-glow2"></div>
+
+      <div class="hero-available">
+        <div class="dot-pulse"></div>
+        Available for internships & collaborations
+      </div>
+
+      <h1 class="hero-name">
+        Hi, I'm<br><span>Bhavya Damani</span>
+      </h1>
+
+      <div class="hero-role">
+        <span id="typed-text"></span><span class="typed-cursor">|</span>
+      </div>
+
+      <p class="hero-bio">
+        Full-Stack Developer, Data Analyst &amp; AI enthusiast based in Mumbai. I build things end-to-end — 
+        from PostgreSQL schemas and REST APIs to polished React frontends and ML pipelines 
+        that turn raw data into real decisions. Also a student leader managing PR, content, and community for multiple college organisations.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-primary">
+          ▶ View my work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          ✉ Get in touch
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num" data-count="8.0" data-suffix="">8.0</div>
+          <div class="hero-stat-label">CGPA / 10</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-count="2" data-suffix="">2</div>
+          <div class="hero-stat-label">Internships</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-count="2" data-suffix="nd">2nd</div>
+          <div class="hero-stat-label">National Showcase</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-count="6" data-suffix="+">6+</div>
+          <div class="hero-stat-label">Projects</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-count="4" data-suffix="">4</div>
+          <div class="hero-stat-label">Leadership Roles</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-label">/ About me</div>
+      <h2 class="section-title">Building things that matter</h2>
+      <div class="section-line"></div>
+
+      <div class="about-grid">
+        <div class="about-img-wrap" data-aos="fade-right">
+          <div class="about-img-frame">
+            <img src="assests\ProfessionalPersonalpic.png" alt="Bhavya Damani" onerror="this.style.display='none';this.parentElement.style.background='var(--bg3)'" />
+          </div>
+          <div class="about-img-accent"></div>
+        </div>
+
+        <div class="about-text" data-aos="fade-left">
+          <p>I'm a <strong>Full-Stack Web Developer and Data Analyst</strong> pursuing a B.E. in AI & Data Science at VCET, Palghar. I work across the full stack — database schema to polished frontend.</p>
+          <p>I've built a live production platform during my internship at Rotaract Club of Virar, an analytics pipeline over <strong>120,000+ retail records</strong>, and a clinical dashboard with an XGBoost model scoring <strong>AUC-ROC 0.87</strong>.</p>
+          <p>I placed <strong>2nd at a national academic showcase</strong> for an ADHD early-diagnostic prediction system — which meant competing against and outranking final-year teams as a second-year student.</p>
+          <p>Beyond technical work, I actively lead college organisations — currently serving as <strong>Social Media Head at Airnova</strong>, <strong>Non-Technical Head at Yantrika</strong>, and Content Creator at Literati Club, while also having headed PR for Team Emechto.</p>
+
+          <div class="service-cards">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-icon">🌐</div>
+              <h4>Full-Stack Dev</h4>
+              <p>Next.js, TypeScript, PostgreSQL, REST APIs — from schema to deployment.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-icon">📊</div>
+              <h4>Data Analytics</h4>
+              <p>End-to-end pipelines, SQL, Power BI dashboards & business insights.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-icon">🤖</div>
+              <h4>Machine Learning</h4>
+              <p>XGBoost, Scikit-learn, feature engineering, SMOTE for imbalanced data.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-icon">🗄️</div>
+              <h4>Database Design</h4>
+              <p>PostgreSQL, MySQL, MongoDB — CTEs, window functions & indexing.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-icon">🔧</div>
+              <h4>IoT & Robotics</h4>
+              <p>Arduino UNO, sensor integration & embedded systems prototyping.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-label">/ Skills</div>
+      <h2 class="section-title">Technical proficiency</h2>
+      <div class="section-line"></div>
+
+      <div class="skills-grid">
+        <div class="skill-group" data-aos="fade-up">
+          <h3>Frontend & Backend</h3>
+          <div class="skill-bar-wrap">
+             <div class="skill-bar-top"><span class="skill-name">HTML5 / CSS3 / Tailwind</span><span class="skill-pct">95%</span></div>
+             <div class="skill-track"><div class="skill-fill" data-pct="95"></div></div>
+          </div>
+
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">TypeScript / JavaScript</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">Node.js / REST APIs</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">Next.js / React.js</span><span class="skill-pct">70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="70"></div></div>
+          </div>
+        </div>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="100">
+          <h3>Data & ML</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">Python (Pandas, NumPy)</span><span class="skill-pct">85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">SQL / PostgreSQL</span><span class="skill-pct">82%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="82"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">ML (XGBoost, Scikit-learn)</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="78"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">Power BI / Tableau</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="75"></div></div>
+          </div>
+        </div>
+        <div class="skill-group" data-aos="fade-up" data-aos-delay="150">
+          <h3>Languages & Systems</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">C & C++</span><span class="skill-pct">80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="80"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">Arduino UNO & IDE</span><span class="skill-pct">75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="75"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">Git / GitHub</span><span class="skill-pct">82%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="82"></div></div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-top"><span class="skill-name">Vercel / Deployment</span><span class="skill-pct">78%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-pct="78"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-pills" data-aos="fade-up" data-aos-delay="200">
+        <span class="tech-pill">Next.js</span>
+        <span class="tech-pill">React.js</span>
+        <span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">C & C++</span>
+        <span class="tech-pill">PostgreSQL</span>
+        <span class="tech-pill">MySQL</span>
+        <span class="tech-pill">MongoDB</span>
+        <span class="tech-pill">Node.js</span>
+        <span class="tech-pill">Tailwind CSS</span>
+        <span class="tech-pill">Bootstrap</span>
+        <span class="tech-pill">Power BI</span>
+        <span class="tech-pill">Tableau</span>
+        <span class="tech-pill">XGBoost</span>
+        <span class="tech-pill">Pandas</span>
+        <span class="tech-pill">Seaborn</span>
+        <span class="tech-pill">Matplotlib</span>
+        <span class="tech-pill">REST APIs</span>
+        <span class="tech-pill">Nodemailer</span>
+        <span class="tech-pill">Arduino UNO</span>
+        <span class="tech-pill">Git</span>
+        <span class="tech-pill">Vercel</span>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume">
+      <div class="section-label">/ Resume</div>
+      <h2 class="section-title">Education &amp; experience</h2>
+      <div class="section-line"></div>
+
+      <div class="resume-cols">
+        <div data-aos="fade-up">
+          <div class="timeline-title"><span>🎓</span> Education</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">Sep 2023 — May 2027</div>
+              <div class="timeline-role">B.E. — AI &amp; Data Science</div>
+              <div class="timeline-org">Vidyavardhini's College of Engineering &amp; Technology, Palghar · CGPA: 8.0 / 10</div>
+              <div class="timeline-desc">Specialised programme covering ML, data analytics, neural networks, and full-stack development. Active in national-level academic competitions.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Sep 2021 — Feb 2023</div>
+              <div class="timeline-role">HSC — Science</div>
+              <div class="timeline-org">SVP Junior College of Science</div>
+              <div class="timeline-desc">MHT-CET: 90.6 percentile. Strong foundation in Mathematics, Physics, and Computer Science.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Aug 2007 — Mar 2021</div>
+              <div class="timeline-role">SSC</div>
+              <div class="timeline-org">St. Paul's High School</div>
+              <div class="timeline-desc">Secondary schooling with a focus on science and mathematics.</div>
+            </div>
+          </div>
+
+          <div class="timeline-title" style="margin-top:2rem"><span>🏆</span> Achievements &amp; Certifications</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2024 — 2025</div>
+              <div class="timeline-role">Runner-Up — National Product Showcase</div>
+              <div class="timeline-org">Vidyavardhini's Institute</div>
+              <div class="timeline-desc">Placed 2nd for the ADHD Early Diagnostic Prediction System using ML on EEG brain-wave data from 19 channels.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">IIT Jodhpur</div>
+              <div class="timeline-role">Line Following Robot Competition</div>
+              <div class="timeline-org">Certificate of Participation</div>
+              <div class="timeline-desc">Competed in national-level robotics competition building a line-following autonomous robot.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Certifications</div>
+              <div class="timeline-role">Advanced C++ · C Programming Basics · Intro to AI</div>
+              <div class="timeline-org">Online Verified Certifications</div>
+              <div class="timeline-desc">Completed certified courses in advanced C++, C basics, and foundational Artificial Intelligence.</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="150">
+          <div class="timeline-title"><span>💼</span> Experience</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">Dec 2025 — Feb 2026</div>
+              <div class="timeline-role">Full-Stack Web Developer Intern</div>
+              <div class="timeline-org">Rotaract Club of Virar</div>
+              <div class="timeline-desc">Duo developer on a live production project. Designed PostgreSQL schema from scratch, built REST APIs in Node.js, delivered a complete responsive Next.js frontend with role-based access control. Full documentation and handover to club leadership.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Sep 2025 — Oct 2025</div>
+              <div class="timeline-role">Frontend Developer (Static Site)</div>
+              <div class="timeline-org">Rotaract Club of Virar</div>
+              <div class="timeline-desc">Built an initial static responsive website using HTML, CSS, JavaScript, Bootstrap, and Nodemailer for the club's contact form before the full-stack rebuild.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Jun 2024</div>
+              <div class="timeline-role">Web Development Intern</div>
+              <div class="timeline-org">Vidyavardhini's College of Engineering &amp; Technology</div>
+              <div class="timeline-desc">Developed a responsive e-commerce interface with HTML, CSS, JavaScript, and MySQL. DOM manipulation, form handling, and SQL-backed data management.</div>
+            </div>
+          </div>
+<div style="margin-top:2rem">
+  <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:1.2rem;display:flex;align-items:center;gap:10px;">
+    <span>📄</span> Download Resume
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+    
+    <a href="assests\Bhavya_WebDev_Resume.pdf" download="Bhavya_WebDev_Resume.pdf" class="resume-card-dl">
+      <div class="resume-card-icon">🌐</div>
+      <div>
+        <div class="resume-card-label">Web Dev Resume</div>
+        <div class="resume-card-sub">Next.js · Node · PostgreSQL</div>
+      </div>
+      <div class="resume-card-arrow">⬇</div>
+    </a>
+
+    <a href="assests\Bhavya_DataAnalytics_Resume.pdf" download="Bhavya_DataAnalytics_Resume.pdf" class="resume-card-dl">
+      <div class="resume-card-icon">📊</div>
+      <div>
+        <div class="resume-card-label">Data Analytics Resume</div>
+        <div class="resume-card-sub">Python · SQL · Power BI</div>
+      </div>
+      <div class="resume-card-arrow">⬇</div>
+    </a>
+    
+  </div>
+</div>
+
+    <!-- PROJECTS -->
+    <section id="portfolio">
+      <div class="section-label">/ Projects</div>
+      <h2 class="section-title">What I've built</h2>
+      <div class="section-line"></div>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All projects</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="data">Data Analytics</button>
+        <button class="filter-btn" data-filter="ml">ML / IoT</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card" data-category="web" data-aos="fade-up" onclick="openModal('rotaract')">
+          <div class="project-card-thumb">
+            <div class="project-thumb-gradient g-web"></div>
+            <div class="project-thumb-emoji">🌐</div>
+          </div>
+          <div class="project-badge">Web Dev</div>
+          <div class="project-card-body">
+            <div class="project-card-title">Rotaract Club Web Platform</div>
+            <div class="project-card-desc">Full-stack Next.js app with PostgreSQL, role-based access, and REST APIs. Sole developer from schema to deployment.</div>
+            <div class="project-tags">
+              <span class="project-tag">Next.js</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+            <div class="project-card-links">
+              <span class="project-link">🔍 Case study</span>
+              <a href="https://github.com/Bhavya031205" target="_blank" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="100" onclick="openModal('clinicaliq')">
+          <div class="project-card-thumb">
+            <div class="project-thumb-gradient g-data"></div>
+            <div class="project-thumb-emoji">📊</div>
+          </div>
+          <div class="project-badge">Data Analytics</div>
+          <div class="project-card-body">
+            <div class="project-card-title">ClinicalIQ — Hospital Readmission</div>
+            <div class="project-card-desc">Full clinical analytics pipeline on 85,000+ EHR records. XGBoost model with AUC-ROC 0.87, 5-page Power BI dashboard.</div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">XGBoost</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Power BI</span>
+            </div>
+            <div class="project-card-links">
+              <span class="project-link">🔍 Case study</span>
+              <a href="https://github.com/Bhavya031205" target="_blank" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="150" onclick="openModal('retailiq')">
+          <div class="project-card-thumb">
+            <div class="project-thumb-gradient g-data"></div>
+            <div class="project-thumb-emoji">🛒</div>
+          </div>
+          <div class="project-badge">Data Analytics</div>
+          <div class="project-card-body">
+            <div class="project-card-title">RetailIQ — Sales Intelligence</div>
+            <div class="project-card-desc">End-to-end analytics on 120,000+ transactions. Random Forest forecasting, ANOVA validation, r=−0.68 discount-margin correlation.</div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">SQL</span>
+              <span class="project-tag">Scikit-learn</span>
+              <span class="project-tag">Power BI</span>
+            </div>
+            <div class="project-card-links">
+              <span class="project-link">🔍 Case study</span>
+              <a href="https://github.com/Bhavya031205" target="_blank" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ml" data-aos="fade-up" data-aos-delay="200" onclick="openModal('adhd')">
+          <div class="project-card-thumb">
+            <div class="project-thumb-gradient g-ml"></div>
+            <div class="project-thumb-emoji">🧠</div>
+          </div>
+          <div class="project-badge">Machine Learning</div>
+          <div class="project-card-body">
+            <div class="project-card-title">ADHD Diagnostic Prediction System</div>
+            <div class="project-card-desc">🥈 Runner-Up, National Showcase. ML model predicting early ADHD markers from behavioural and physiological data.</div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Scikit-learn</span>
+              <span class="project-tag">TensorFlow</span>
+              <span class="project-tag">EDA</span>
+            </div>
+            <div class="project-card-links">
+              <span class="project-link">🔍 Case study</span>
+              <a href="https://github.com/Bhavya031205" target="_blank" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="250" onclick="openModal('ecom')">
+          <div class="project-card-thumb">
+            <div class="project-thumb-gradient g-web"></div>
+            <div class="project-thumb-emoji">🛍️</div>
+          </div>
+          <div class="project-badge">Web Dev</div>
+          <div class="project-card-body">
+            <div class="project-card-title">E-Commerce Web Application</div>
+            <div class="project-card-desc">Multi-page e-commerce app with product listing, search, cart, and order flows. MySQL backend with mobile-first design.</div>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">MySQL</span>
+            </div>
+            <div class="project-card-links">
+              <span class="project-link">🔍 Case study</span>
+              <a href="https://github.com/Bhavya031205" target="_blank" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="300" onclick="openModal('rotaract_static')">
+          <div class="project-card-thumb">
+            <div class="project-thumb-gradient g-web"></div>
+            <div class="project-thumb-emoji">🔗</div>
+          </div>
+          <div class="project-badge">Web Dev</div>
+          <div class="project-card-body">
+            <div class="project-card-title">Rotaract Club — Static Website</div>
+            <div class="project-card-desc">Responsive static site with contact form via Nodemailer. Built as the club's first web presence before the full-stack rebuild.</div>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Bootstrap</span>
+              <span class="project-tag">Nodemailer</span>
+            </div>
+            <div class="project-card-links">
+              <span class="project-link">🔍 Case study</span>
+              <a href="https://github.com/Bhavya031205" target="_blank" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="ml" data-aos="fade-up" data-aos-delay="350" onclick="openModal('robot')">
+          <div class="project-card-thumb">
+            <div class="project-thumb-gradient g-ml"></div>
+            <div class="project-thumb-emoji">🤖</div>
+          </div>
+          <div class="project-badge">IoT / Robotics</div>
+          <div class="project-card-body">
+            <div class="project-card-title">Obstacle Avoiding Robot</div>
+            <div class="project-card-desc">Autonomous robot that detects and avoids obstacles in real-time using ultrasonic sensors and Arduino UNO motor control logic.</div>
+            <div class="project-tags">
+              <span class="project-tag">Arduino UNO</span>
+              <span class="project-tag">Arduino IDE</span>
+              <span class="project-tag">C++</span>
+              <span class="project-tag">Robotics</span>
+            </div>
+            <div class="project-card-links">
+              <span class="project-link">🔍 Case study</span>
+              <a href="https://github.com/Bhavya031205" target="_blank" class="project-link" onclick="event.stopPropagation()">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership">
+      <div class="section-label">/ Leadership</div>
+      <h2 class="section-title">Roles &amp; responsibilities</h2>
+      <div class="section-line"></div>
+
+      <div class="leadership-grid">
+
+        <div class="leadership-card" data-aos="fade-up">
+          <div class="leadership-org">Airnova</div>
+          <div class="leadership-role">Social Media Head</div>
+          <div class="leadership-period">Oct 2025 — Present</div>
+          <div class="leadership-desc">Leading social media strategy and content direction for Airnova. Previously served as Social Media Member from Jan 2025 before stepping up to head the department.</div>
+          <span class="leadership-badge current">● Current</span>
+        </div>
+
+        <div class="leadership-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="leadership-org">Yantrika — Technical Festival</div>
+          <div class="leadership-role">Non-Technical Head</div>
+          <div class="leadership-period">Oct 2025 — Present</div>
+          <div class="leadership-desc">Managing non-technical operations for Yantrika. Previously served as Head of Public Relations (Mar–Dec 2025) and PR Responsible &amp; R&amp;D Member (Sep 2023 onwards).</div>
+          <span class="leadership-badge current">● Current · 2+ years</span>
+        </div>
+
+        <div class="leadership-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="leadership-org">Literati Club — VCET</div>
+          <div class="leadership-role">Content Creator</div>
+          <div class="leadership-period">Sep 2024 — Jul 2025</div>
+          <div class="leadership-desc">Created written content and creative material for the college's literary club, contributing to events, newsletters, and social communications.</div>
+          <span class="leadership-badge">11 months</span>
+        </div>
+
+        <div class="leadership-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="leadership-org">Team Emechto</div>
+          <div class="leadership-role">Public Relations Responsible</div>
+          <div class="leadership-period">Oct 2023 — Jan 2025</div>
+          <div class="leadership-desc">Managed public relations for Team Emechto, a technical student team. Handled outreach, communications, and community engagement for the team's activities and competitions.</div>
+          <span class="leadership-badge">1 year 4 months</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-label">/ Contact</div>
+      <h2 class="section-title">Let's work together</h2>
+      <div class="section-line"></div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <p>I'm actively looking for internship opportunities, freelance projects, and interesting collaborations. Whether you have a product idea, a data problem, or just want to connect — I'd love to hear from you.</p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">✉</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">bhavyadamani3125@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">in</div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-value">linkedin.com/in/bhavyadamani-1009b6277</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⌥</div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-value">github.com/Bhavya031205</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">Mumbai, Maharashtra, India</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form" data-aos="fade-left">
+          <!-- ✅ SUCCESS STATE -->
+          <div id="formSuccess" style="display:none; text-align:center; padding: 3rem 1rem;">
+            <div style="font-size:52px; margin-bottom:1rem;">✅</div>
+            <div style="font-family:'Syne',sans-serif; font-size:20px; font-weight:700; color:var(--text); margin-bottom:0.5rem;">Message sent!</div>
+            <div style="font-size:14px; color:var(--text2); margin-bottom:1.5rem;">Thanks for reaching out. I'll get back to you soon.</div>
+            <button class="btn-submit" style="width:auto; padding:10px 28px;" onclick="resetContactForm()">Send another →</button>
+          </div>
+
+          <!-- ❌ ERROR STATE -->
+          <div id="formError" style="display:none; background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.25); border-radius:var(--radius2); padding:12px 16px; margin-bottom:16px; font-size:13px; color:#ef4444;">
+            ⚠ Something went wrong. Please try again or email me directly at <strong>bhavyadamani3125@gmail.com</strong>
+          </div>
+
+          <!-- 📋 FORM -->
+          <div id="formFields">
+            <div class="form-group">
+              <label>Your name</label>
+              <input type="text" id="cf-name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label>Email address</label>
+              <input type="email" id="cf-email" placeholder="hello@company.com" required />
+            </div>
+            <div class="form-group">
+              <label>What's this about?</label>
+              <input type="text" id="cf-subject" placeholder="Internship / Freelance / Just saying hi" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="cf-message" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button class="btn-submit" id="cf-submit" onclick="submitContactForm(event)">
+              Send message →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ── Project Modals ── -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-badge" id="modalBadge"></div>
+      <div class="modal-title" id="modalTitle"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-thumb" id="modalThumb">
+        <div class="project-thumb-gradient" id="modalGrad"></div>
+        <div class="modal-thumb-emoji" id="modalEmoji"></div>
+      </div>
+      <div class="modal-section-title">Overview</div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-metrics" id="modalMetrics"></div>
+      <div class="modal-section-title">Tech stack</div>
+      <div class="modal-tags" id="modalTags"></div>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+</div>
+
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
