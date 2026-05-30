@@ -173,6 +173,10 @@ body::before {
 
 /* ─── Section base ───────────────────────────────────── */
 section { padding: 5rem 4rem; max-width: 960px; margin-left: 0; }
+/* And add specifically for contact: */
+#contact {
+  max-width: 100%;
+}
 .section-label {
   font-size: 11px; font-weight: 600; letter-spacing: 3px;
   color: var(--accent); text-transform: uppercase; margin-bottom: 0.75rem;
@@ -468,7 +472,7 @@ section { padding: 5rem 4rem; max-width: 960px; margin-left: 0; }
 .modal-links { display: flex; gap: 10px; margin-top: 1.5rem; }
 
 /* ─── CONTACT ────────────────────────────────────────── */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.contact-grid { display: grid; grid-template-columns: minmax(300px, 1fr) minmax(320px, 1fr); gap: 3rem; align-items: start; }
 .contact-info p { font-size: 15px; color: var(--text2); line-height: 1.8; margin-bottom: 2rem; }
 .contact-item {
   display: flex; align-items: center; gap: 14px;
@@ -508,6 +512,16 @@ section { padding: 5rem 4rem; max-width: 960px; margin-left: 0; }
   transition: all 0.25s; letter-spacing: 0.5px;
 }
 .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,229,192,0.3); }
+/* Add this: */
+.contact-form {
+  min-width: 0;   /* prevents flex/grid overflow */
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  min-width: 0;   /* prevents inputs from overflowing their container */
+}
 
 /* ─── Scroll progress ────────────────────────────────── */
 .scroll-progress {
